@@ -24,7 +24,10 @@ class Grid {
   addItems(row, column, items) {
     this.#checkCoords(row, column)
 
-    this.matrix[row][column] = { ...this.matrix[row][column], ...items }
+    this.matrix[row - 1][column - 1] = {
+      ...this.matrix[row - 1][column - 1],
+      ...items
+    }
   }
 
   getMatrix() {
